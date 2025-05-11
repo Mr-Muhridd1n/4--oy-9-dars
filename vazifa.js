@@ -304,3 +304,64 @@ A[0], A[2], A[4], ... A[1], A[3], A[5],.... Shart operatori ishlatilmasin.
 // for (let i = 0; i < a.length; i++) {
 //   console.log(a[i], a[i] * k);
 // }
+
+// /** 22) Array22. n ta elementdan iborat massiv berilgan (n juft son). Massivning birinchi yarmi va ikkinchi yarmi qiymatlari almashtirilsin. */
+
+// let arr = [4, 5, 7, 5, 8, 5, 2, 7, 4, 4];
+// let n = arr.length;
+// let yarmi = n / 2;
+
+// for (let i = 0; i < yarmi; i++) {
+//   let sum = arr[i];
+//   arr[i] = arr[i + yarmi];
+//   arr[i + yarmi] = sum;
+// }
+
+// console.log(arr);
+
+// /** 23)  Array23. n ta elementdan iborat massiv berilgan. Massivning elementlari teskari tartibda joylashtirilsin. (DIQQAT: Sizdan teskari tartibda chiqarish talab qilinayotgani yo'q. a[0] element a[n-1] bilan almashsin, va hakazo, teskari tartibda joylashtirish talab qilinyapti)*/
+
+// let arr = [4, 5, 7, 5, 8, 5, 2, 7, 4, 4];
+// let n = arr.length;
+
+// for (let i = 0; i < Math.floor(n / 2); i++) {
+//   let temp = arr[i];
+//   arr[i] = arr[n - 1 - i];
+//   arr[n - 1 - i] = temp;
+// }
+
+// console.log(arr);
+
+// /** 24)  Array24. n ta butun sonlardan iborat a massiv berilgan. Massivning eng kichik va eng katta elementlari orasidagilarini nolga almashtiruvchi programma tuzilsin. Eng kichik va eng katta elementlari o'zgarishsiz qoldirilsin*/
+
+// let arr = [4, 5, 2, 5, 8, 5, 2, 7, 4, 4];
+// let max = arr[0];
+// let min = arr[1];
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > max) {
+//     max = arr[i];
+//   } else if (arr[i] < min) {
+//     min = arr[i];
+//   }
+// }
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] !== max && arr[i] !== min) {
+//     arr[i] = 0;
+//   }
+// }
+
+// console.log(arr);
+
+// /**  25) Array25. n ta elementdan tashkil topgan massiv berilgan. Massiv elementlarini bir qadam chapga siklik siljituvchi programma tuzilsin. a[n-1] element qiymati a[n-2] ga o'tadi, a[n-2] esa a[n-3] ga, ... a[0] esa a [n-1] ga o'tadi.  */
+
+// let arr = [4, 5, 2, 5, 8, 5, 2, 7, 4, 4];
+// let temp = arr[0];
+
+// for (let i = 0; i < arr.length - 1; i++) {
+//   arr[i] = arr[i + 1];
+// }
+
+// arr[arr.length - 1] = temp;
+
+// console.log(arr);
